@@ -19,7 +19,7 @@ export default function Navbar(props) {
   }, []);
 
   const handleSearch = (value) => {
-    if (value.length == 0) {
+    if (value.length === 0) {
       setSearching(false);
       return;
     }
@@ -73,7 +73,7 @@ export default function Navbar(props) {
             </ul>
           </div>
         )}
-        {searchResult.length == 0 && searching && (
+        {searchResult.length === 0 && searching && (
           <div className="search-results">No pokemon found</div>
         )}
       </div>
