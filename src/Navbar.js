@@ -8,7 +8,7 @@ export default function Navbar(props) {
   const [pokemons, setPokemons] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const [searching, setSearching] = useState(false);
-  const location = useLocation();
+  
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=764&offset=200")
