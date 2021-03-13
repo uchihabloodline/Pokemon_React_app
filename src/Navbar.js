@@ -2,13 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, BrowserRouter as Router } from "react-router-dom";
-import { useLocation } from "react-router";
 
 export default function Navbar(props) {
   const [pokemons, setPokemons] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const [searching, setSearching] = useState(false);
-  
+
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=764&offset=200")
